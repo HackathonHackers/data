@@ -1,0 +1,9 @@
+{
+  "male" : ["he", "hes", "him", "himself", "his", "male", "males", "sir", "man", "men", "mr", "guy", "guys", "gentlemen", "gentleman",
+        "chiquito", "chiquitos", "hombre", "lad", "lads", "boy", "boys", "dude", "dudes", "bro", "bros", "brother", "brothers",
+        "broseph", "mister"],
+  "female" : ["she", "shes", "her", "herself",  "hers", "female", "females", "madam", "mam", "ms", "mrs", "chick", "chicks", "chiquita",
+          "chiquitas", "woman", "women", "lady", "ladies", "lass", "lassie", "lassies", "girl", "girls", "gal", "gals",
+          "missy", "misses", "dudette", "dudettes", "sis", "sister", "sisters", "maam", "grill", "grills", "brah", "brahs",
+          "brosophina", "brosophina", "bitch", "bitches", "whore", "whores", "mistress", "hoe", "hoes", "slut", "sluts"]
+}
