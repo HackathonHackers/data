@@ -1,14 +1,15 @@
 {
-  "male" : ["he", "hes", "him", "himself", "his", "male", "males", "sir", "man", "men", "mr", "guy", "guys", "gentlemen", "gentleman",
-        "chiquito", "chiquitos", "hombre", "lad", "lads", "boy", "boys", "dude", "dudes", "bro", "bros", "broing", "brother", "brothers",
+  "male" : ["he", "hes", "him", "himself", "his", "male", "males", "sir", "man", "men", "mr", "guy", "guys", "guyz", "gentlemen", "gentleman",
+        "chiquito", "chiquitos", "hombre", "lad", "lads", "boy", "boys", "boyz", "dude", "dudes", "bro", "bros", "broing", "brother", "brothers",
         "broseph", "brosephs", "mister", "latino", "latinos", "boyfriend", "boyfriends", "gay", "gays", "dick", "dicks",
         "granddad", "granddads", "grandpa", "grandpas", "grandfather", "grandfathers", "grandpop", "grandpops", "dad", "dads",
         "pa", "pas", "father", "fathers", "uncle", "uncles", "nephew", "nephews", "son", "sons"],
   "female" : ["she", "shes", "her", "herself",  "hers", "female", "females", "madam", "mam", "ms", "mrs", "chick", "chicks", "chiquita",
-          "chiquitas", "woman", "women", "lady", "ladies", "lass", "lassie", "lassies", "girl", "girls", "gal", "gals",
+          "chiquitas", "woman", "women", "lady", "ladies", "lass", "lassie", "lassies", "girl", "girls", "girlz", "gal", "gals",
+          "grl", "grls", "grlz", "gurl", "gurls", "gurlz", "missie",  "latina", "latinas",
           "missy", "misses", "dudette", "dudettes", "sis","siss", "sister", "sisters", "maam", "grill", "grills", "brah", "brahs",
-          "brosophina", "brosophinas", "mistress", "mistresses", "slut", "sluts", "latina", "latinas", "girlfriend", "lesbian", "lesbians",
-          "babe", "bby", "babes", "grandma", "grandmas", "grandmom", "grandmoms", "grandmother", "grandmothers", "mom", "moms", "mother", "mothers",
-          "mum", "mums", "aunt", "aunts", "auntie", "aunties", "niece", "nieces", "daughter", "daughters"]
+          "brosophina", "brosophinas", "mistress", "mistresses", "slut", "sluts", "girlfriend", "lesbian", "lesbians",
+          "babe", "bby", "babes", "grandma", "grandmas", "grandmom", "grandmoms", "grandmother", "grandmothers", "mom",
+          "moms", "mother", "mothers", "mum", "mums", "aunt", "aunts", "auntie", "aunties", "niece", "nieces", "daughter", "daughters"]
 
 }
