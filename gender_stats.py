@@ -68,6 +68,7 @@ comments['both'] = [1 if row['male'] == 1 and row['female'] == 1 else 0 for (i, 
 comments['none'] = [0 if row['male'] == 1 or row['female'] == 1 else 1 for (i, row) in comments.iterrows()]
 
 comments.index=comments['date']
+comments.index = comments.index.tz_localize('UTC').tz_convert('US/Central')
 
 # start of analysis on different categories in the data
 
