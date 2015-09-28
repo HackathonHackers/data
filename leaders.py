@@ -1,30 +1,23 @@
 __author__ = 'Megan Ruthven'
 import re
-from nltk.corpus import stopwords
 import pandas as pd
-import json
 import os
-
-from collections import Counter
 import matplotlib.pyplot as plt
-import numpy as np
+
+
 print "Lets look at those datas";
 dataPath = 'your_path_to_hh_data.csv';
 
-runName = 'ref_'
 reader = pd.read_csv(dataPath, encoding='utf-8')
-#reader = reader[reader.group_name != 'Ladies Storm Hackathons'].reset_index();
-#reader = reader[reader.group_name == 'Hackathon Hackers'].reset_index();
 
 likes = reader[reader.type == 'like'];
 comments = reader[reader.type != 'like'];
-#comments = comments[comments['parent_type'] == 'group']
+
 comments['date'] = pd.to_datetime(comments['created_time'])
 comments.index=comments['date']
 comments.index = comments.index.tz_localize('UTC').tz_convert('US/Central')
 beginning = pd.to_datetime("2014-07-01")
 comments = comments[comments.index >= beginning]
-
 
 tops = 20;
 named = 'all'
@@ -75,6 +68,17 @@ res = res.sort(columns = 'like_count', ascending = False)
 out = res[['from_name', 'like_count']][0:tops]
 out.columns = ['Name', 'Median likes']
 out.to_csv(named + '\\top_posts_median_liked.csv', sep=',', encoding='utf-8', index = False);
+
+
+res = members['comment_count'].median();
+pes = members['type'].count();
+res = pd.concat([res, pes], axis=1, join='inner')
+res = res.reset_index();
+res = res[res['type'] >=10]
+res = res.sort(columns = 'comment_count', ascending = False)
+out = res[['from_name', 'comment_count']][0:tops]
+out.columns = ['Name', 'Median Comments']
+out.to_csv(named + '\\top_posts_median_comments.csv', sep=',', encoding='utf-8', index = False);
 
 
 members = likes.groupby(['from_id', 'from_name'])
@@ -139,6 +143,16 @@ for name, group in grouped:
         out = res[['from_name', 'like_count']][0:tops]
         out.columns = ['Name', 'Median likes']
         out.to_csv(named + '\\top_posts_median_liked.csv', sep=',', encoding='utf-8', index = False);
+
+        res = members['comment_count'].median();
+        pes = members['type'].count();
+        res = pd.concat([res, pes], axis=1, join='inner')
+        res = res.reset_index();
+        res = res[res['type'] >=10]
+        res = res.sort(columns = 'comment_count', ascending = False)
+        out = res[['from_name', 'comment_count']][0:tops]
+        out.columns = ['Name', 'Median Comments']
+        out.to_csv(named + '\\top_posts_median_comments.csv', sep=',', encoding='utf-8', index = False);
 
         print 'Finished most active for ' + named + ' subgroup'
 
