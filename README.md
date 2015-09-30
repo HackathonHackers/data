@@ -1,7 +1,7 @@
 # Hackathon Hackers Data
 Analysis and machine learning algorithms based off of [Hackathon Hackers' Facebook interaction data](https://www.facebook.com/groups/datahackers/permalink/702750256523053/).
 
-We welcome any new analysis. Pull request with your script, results, and/or analysis of the results and well add you into the collection. 
+We welcome any new analysis. Pull request with your script, results, and/or analysis of the results and we'll add you into the collection. 
 
 
 ## Written Analysis
@@ -14,4 +14,4 @@ Listed in chronological order
 
 3. [Who is the most active in Hackathon Hackers?](https://medium.com/hackathon-hackers/who-is-the-most-active-in-hh-49cbd8447550) by [Megan Ruthven](http://maruthven.com/)
 
-# Happy data hacking
+# Happy data hacking!
