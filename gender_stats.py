@@ -46,29 +46,23 @@ likes = reader[reader.type == 'like'];
 comments = reader[reader.type != 'like'];
 comments = comments[comments['parent_type'] == 'group']
 comments['norm_message'] = [re.sub('[^0-9a-zA-Z\x20]+', ' ', re.sub('\'+', '', row.encode('latin-1','ignore'))).lower().strip() if isinstance(row, unicode) else '' for row in comments.message]
-likeMean = 0
-print likeMean;
-comments['norm_likes'] = comments['like_count'];
 
 comments['date'] = pd.to_datetime(comments['created_time'])
 comments = comments.sort(['date'])
+
+# only using posts from when HH became somewhat active
+beginning = pd.to_datetime("2014-07-01")
+comments = comments[comments['date'].notnull()]
+comments = comments[comments['date'] >= beginning]
+
 comments.index=comments['date']
 comments.index = comments.index.tz_localize('UTC').tz_convert('US/Central')
-# using only dates from HH's inception onwards
-comments15 = comments[comments.index.year == 2015];
-comments14 = comments[comments.index.year == 2014];
-comments14.index=comments14['date']
-comments14 = comments14[comments14.index.month >= 7];
-comments = comments15.append(comments14, ignore_index = True)
 
 # determining gender membership
 comments['male'] = [1 if mset.intersection(row.split()) else 0 for row in comments['norm_message']]
 comments['female'] = [1 if fset.intersection(row.split()) else 0 for row in comments['norm_message']]
 comments['both'] = [1 if row['male'] == 1 and row['female'] == 1 else 0 for (i, row) in comments.iterrows()]
 comments['none'] = [0 if row['male'] == 1 or row['female'] == 1 else 1 for (i, row) in comments.iterrows()]
-
-comments.index=comments['date']
-comments.index = comments.index.tz_localize('UTC').tz_convert('US/Central')
 
 # start of analysis on different categories in the data
 
