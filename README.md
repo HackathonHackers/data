@@ -16,6 +16,6 @@ Listed in chronological order
 
 
 ## Notebooks
-[Rubinovitz](www.github.com/rubinovitz) is starting to add some Jupyter notebooks for interactive data analysis. Check the Notebooks directory for a 2015 Salary Survey notebook.
+[Rubinovitz](www.github.com/rubinovitz) is starting to add some Jupyter notebooks for interactive data analysis. Check the notebooks directory for a 2015 Salary Survey notebook.
 
 # Happy data hacking!
