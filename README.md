@@ -14,4 +14,8 @@ Listed in chronological order
 
 3. [Who is the most active in Hackathon Hackers?](https://medium.com/hackathon-hackers/who-is-the-most-active-in-hh-49cbd8447550) by [Megan Ruthven](http://maruthven.com/)
 
+
+## Notebooks
+[Rubinovitz](www.github.com/rubinovitz) is starting to add some Jupyter notebooks for interactive data analysis. Check the Notebooks directory for a 2015 Salary Survey notebook.
+
 # Happy data hacking!
